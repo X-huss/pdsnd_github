@@ -1,0 +1,64 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    margin: auto;
+    padding: 1em;
+    width: 80%;
+}
+
+.city-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.city {
+    background: #03a9f4;
+    box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.4);
+    color: white;
+    margin: 0.5em;
+    min-height: 200px;
+    flex: 0 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cityn:hover h2 {
+    transform: rotate(0deg);
+}
+
+h2 {
+    margin: 0;
+    transform: rotate(-45deg);
+    transition: transform 0.5s;
+    text-shadow: 0 0 5px #01579b;
+}
+
+#chicago {
+    background-color: #042a1e;
+}
+
+#washington {
+    background-color: #32100a;
+}
+
+#new_york_city {
+    background-color: #43d00f;
+}

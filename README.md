@@ -14,9 +14,10 @@ Using this system help users to unlock OR return a __bike__, they use the system
 Bike share data collected from three cities
 chicago.csv
 washington.csv
+new_york_city.csv
 
 ### Credits
-the following links show how to make a neat file
+The following links show how to make a neat file
 
 [Markdown](https://github.com/atom/markdown-preview)
 

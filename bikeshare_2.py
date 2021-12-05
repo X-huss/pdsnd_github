@@ -17,17 +17,50 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-
+while True:
+        city_list = ['chicago','new york city','washington']
+        city = input('which city you would like to check "chicago", "new york city" OR "washington": ')
+        if city not in city_list:
+            print('your input is invalid, enter again')
+        else:
+            print('you choose the city ',city)
+            break
 
     # get user input for month (all, january, february, ... , june)
-
+while True:
+        month_list = ['all','january','february','march','april','may','june']
+        month = input('enter a month name in small letters from the first 6 months OR "all" for all month data: ').lower()
+        if month not in month_list:
+            print('your input is invalid, enter again')
+        else:
+            print('your month is ',month)
+            break
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
+while True:
+        day_list = ['All','Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+        day = input('enter the full day name of the week in Small letters: ').title()
+        if day not in day_list:
+            print('your input is invalid, enter again')
+        else:
+            print('your chosen day is ',day)
+            break
 
 
     print('-'*40)
     return city, month, day
 
+def display(df):
+    condition = True
+    start = 0
+    while (condition):
+        request = input('\nDo you want to see data details based on your filter? (10 raws per page), answer "yes" OR "no":\n').lower()
+        if request == 'yes':
+            print(df.iloc[start:start + 10])
+            start += 10
+            condition = True
+        else:
+            condition = False
 
 def load_data(city, month, day):
     """
@@ -123,6 +156,7 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
+        display(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)

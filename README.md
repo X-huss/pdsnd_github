@@ -22,3 +22,5 @@ The following links show how to make a neat file
 [Markdown](https://github.com/atom/markdown-preview)
 
 [Basic](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+![image](https://thumbs.dreamstime.com/z/welcome-word-14571465.jpg)

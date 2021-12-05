@@ -45,11 +45,22 @@ while True:
         else:
             print('your chosen day is ',day)
             break
-            
+
 
     print('-'*40)
     return city, month, day
 
+def display(df):
+    condition = True
+    start = 0
+    while (condition):
+        request = input('\nDo you want to see data details based on your filter? (10 raws per page), answer "yes" OR "no":\n').lower()
+        if request == 'yes':
+            print(df.iloc[start:start + 10])
+            start += 10
+            condition = True
+        else:
+            condition = False
 
 def load_data(city, month, day):
     """
@@ -145,6 +156,7 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
+        display(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
